@@ -41,8 +41,10 @@
   font-size: 24px;
   width: 24px;
   height: 24px;
+  color: var(--ig-primary-500);
 }
 .text {
+  text-align: center;
   color: var(--ig-gray-800);
   height: max-content;
   min-width: min-content;
@@ -56,8 +58,8 @@
   align-items: center;
   align-content: flex-start;
   position: relative;
-  width: 85%;
-  min-width: 85%;
+  width: 80%;
+  min-width: 80%;
   max-width: 80%;
 }
 .group_1 {
@@ -94,10 +96,10 @@
   gap: 16px;
   position: relative;
   padding: 0 24px;
-  height: 35px;
+  height: 50px;
   min-width: 50px;
   min-height: 35px;
-  max-height: 35px;
+  max-height: 50px;
 }
 .button {
   --igx-button-foreground: var(--ig-gray-100);
