@@ -9,4 +9,7 @@ import { IGX_NAVBAR_DIRECTIVES, IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxButtonDirec
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public iconButtonVisible: boolean = false;
+  public iconButtonVisible1: boolean = false;
+  public iconButtonVisible2: boolean = false;
 }

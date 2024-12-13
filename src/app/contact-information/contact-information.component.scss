@@ -75,6 +75,7 @@
   flex-basis: 0;
 }
 .group_3 {
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -94,42 +95,39 @@
   align-content: flex-start;
   position: relative;
   padding: 24px;
-  width: 50%;
-  min-width: 50%;
   min-height: 240px;
-  max-width: 50%;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 .group_4 {
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
   align-content: flex-start;
   overflow: auto;
   position: relative;
   padding: 20px;
-  width: 50%;
-  min-width: 50%;
-  max-width: 50%;
-  flex-shrink: 0;
+  min-width: 500px;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 .group_5 {
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   align-content: flex-start;
   gap: 2px;
   position: relative;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 300px;
 }
 .group_6 {
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   align-content: flex-start;
   gap: 5px;
   position: relative;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 300px;
 }
 .h4 {
   text-align: center;
@@ -153,22 +151,10 @@
   height: max-content;
   min-width: min-content;
 }
-.terms-header-5 {
-  width: 74px;
+.terms-header-7 {
   height: max-content;
-  min-width: min-content;
-  max-width: 74px;
-}
-.terms-header-6 {
-  width: 259px;
-  height: max-content;
-  min-width: min-content;
-  max-width: 259px;
 }
 .terms-header-8 {
   margin: 5px;
-  width: 100%;
   height: max-content;
-  min-width: min-content;
-  max-width: 100%;
 }
