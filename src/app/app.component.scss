@@ -48,7 +48,6 @@
   color: var(--ig-gray-800);
   height: max-content;
   min-width: min-content;
-  flex-shrink: 0;
 }
 .row-layout {
   display: flex;
@@ -100,6 +99,19 @@
   min-width: 50px;
   min-height: 35px;
   max-height: 65px;
+}
+.group_3 {
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 5px;
+  position: relative;
+}
+.group_4 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
 }
 .button {
   --igx-button-foreground: var(--ig-gray-100);
