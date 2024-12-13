@@ -7,42 +7,63 @@
   align-content: flex-start;
   overflow: auto;
 }
+.navbar {
+  width: 100%;
+  height: max-content;
+  min-width: min-content;
+  max-width: 100%;
+}
+.nav-drawer {
+  min-width: min-content;
+  min-height: 0;
+  max-width: 247px;
+  flex-shrink: 0;
+}
+.view-container {
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.icon-button {
+  --igx-button-foreground: var(--ig-gray-100);
+}
+.navbar-content {
+  gap: 1rem;
+}
+.icon {
+  color: var(--ig-gray-100);
+}
+.h6 {
+  margin: 0;
+}
+.icon_1 {
+  --size: 24px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.text {
+  color: var(--ig-gray-800);
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
 .row-layout {
   display: flex;
 }
 .group {
-  border-color: var(--ig-gray-200);
-  border-width: 0px 0px 1px;
-  border-style: solid;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   align-content: flex-start;
   position: relative;
-  padding: 10px;
-  width: 100%;
-  min-width: 100%;
-  min-height: 71px;
-  max-width: 100%;
-  align-self: center;
-  flex-grow: 1;
-  flex-shrink: 0;
+  width: 85%;
+  min-width: 85%;
+  max-width: 80%;
 }
 .group_1 {
-  justify-content: center;
-  align-items: center;
-  align-content: flex-start;
-  overflow: hidden;
-  position: relative;
-  padding: 0 0 0 10px;
-}
-.group_2 {
-  justify-content: center;
-  align-items: center;
-  align-content: flex-start;
-  overflow: hidden;
-  position: relative;
-}
-.group_3 {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -66,39 +87,16 @@
   min-height: 35px;
   max-height: 35px;
 }
-.icon-button {
-  --igx-button-foreground: var(--ig-surface-500);
-  --igx-button-background: var(--ig-primary-300);
-}
-.icon {
-  color: var(--ig-surface-500);
-}
-.icon_1 {
-  --size: 24px;
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
-}
-.text {
-  color: var(--ig-gray-800);
-  height: max-content;
-  min-width: min-content;
-  flex-shrink: 0;
-}
 .button {
-  --igx-button-foreground: var(--ig-gray-700);
+  --igx-button-foreground: var(--ig-gray-100);
   --ig-size: var(--ig-size-medium);
   height: max-content;
   flex-shrink: 0;
 }
-.nav-drawer {
-  min-width: min-content;
-  min-height: 0;
-  max-width: 247px;
+.button_1 {
+  --igx-button-foreground: var(--ig-gray-100);
+  --igx-button-background: var(--ig-primary-500);
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
   flex-shrink: 0;
-}
-.view-container {
-  overflow: auto;
-  position: relative;
-  flex-grow: 1;
 }
