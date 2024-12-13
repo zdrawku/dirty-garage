@@ -6,18 +6,6 @@
   align-items: stretch;
   align-content: flex-start;
 }
-.column-layout {
-  display: flex;
-  flex-direction: column;
-}
-.page-content {
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: flex-start;
-  position: relative;
-  flex-grow: 1;
-  flex-shrink: 0;
-}
 .row-layout {
   display: flex;
 }
@@ -32,6 +20,7 @@
   position: relative;
   padding: 24px;
   min-height: 240px;
+  flex-shrink: 0;
 }
 .group {
   justify-content: flex-start;
@@ -43,6 +32,10 @@
   flex-grow: 1;
   flex-basis: 0;
 }
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
 .group_1 {
   justify-content: flex-start;
   align-items: stretch;
@@ -52,10 +45,12 @@
   flex-basis: 0;
 }
 .content {
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   align-content: flex-start;
+  gap: 50px;
   position: relative;
+  padding: 80px;
   min-width: 50px;
   flex-grow: 1;
   flex-shrink: 0;
@@ -64,15 +59,9 @@
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
-  gap: 50px;
+  gap: 25px;
   position: relative;
-  padding: 100px;
-  height: 100%;
-  min-width: 50px;
-  min-height: 50px;
-  max-height: 100%;
-  flex-grow: 1;
-  flex-basis: 0;
+  max-width: 750px;
 }
 .h4 {
   text-align: center;

@@ -22,10 +22,7 @@
 .view-container {
   overflow: auto;
   position: relative;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  flex-shrink: 0;
+  flex-grow: 1;
 }
 .icon-button {
   --igx-button-foreground: var(--ig-gray-100);
@@ -70,6 +67,21 @@
   position: relative;
   min-width: 50px;
   min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  overflow: auto;
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 .footer {
   background-color: var(--ig-gray-100);
