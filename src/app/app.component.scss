@@ -97,22 +97,23 @@
   align-content: flex-start;
   gap: 16px;
   position: relative;
-  padding: 0 24px;
-  height: 65px;
+  padding: 12px;
   min-width: 50px;
-  min-height: 35px;
-  max-height: 65px;
+  min-height: 65px;
 }
 .group_2 {
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: flex-start;
-  gap: 5px;
+  gap: 10px;
+  overflow: auto;
   position: relative;
 }
 .group_3 {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
+  gap: 0;
   position: relative;
 }
