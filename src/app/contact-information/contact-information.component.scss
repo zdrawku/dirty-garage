@@ -64,13 +64,50 @@
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
-  gap: 10px;
+  gap: 50px;
   position: relative;
-  padding: 100px;
+  padding: 120px;
+  height: 100%;
   min-width: 50px;
   min-height: 50px;
+  max-height: 100%;
   flex-grow: 1;
   flex-basis: 0;
+}
+.group_3 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+.main-page-header-1 {
+  background-color: #151725;
+  background-image: url("/assets/generate-me-an-image-showcasing-a-bookings-page-for-a-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 24px;
+  width: 50%;
+  min-width: 50%;
+  min-height: 240px;
+  max-width: 50%;
+}
+.group_4 {
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 20px;
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+  flex-shrink: 0;
 }
 .h4 {
   text-align: center;
@@ -91,6 +128,8 @@
   min-width: min-content;
 }
 .terms-header-1 {
+  width: 100%;
   height: max-content;
   min-width: min-content;
+  max-width: 100%;
 }

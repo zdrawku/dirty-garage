@@ -1,35 +1,37 @@
-<div class="row-layout group">
-  <div class="row-layout group_1">
+<igx-navbar class="navbar">
+  <igx-navbar-action>
     <button igxRipple igxIconButton="flat" [igxToggleAction]="navDrawer" class="icon-button">
       <igx-icon class="icon">
         menu
       </igx-icon>
     </button>
-  </div>
-  <div class="row-layout group_2">
-    <button igxButton="flat" type="button" igxRipple routerLink="/general-info" class="button">
-      Основна информация
-    </button>
-    <button igxButton="flat" type="button" igxRipple routerLink="/polish-info" class="button">
-      Полиране на фарове
-    </button>
-    <button igxButton="flat" type="button" igxRipple routerLink="/who-we-are" class="button">
-      Кои сме ние?
-    </button>
-  </div>
-</div>
-<div class="row-layout group_3">
-  <igx-nav-drawer [isOpen]="true" [pin]="true" width="247px" #navDrawer class="nav-drawer">
+  </igx-navbar-action>
+  <igx-navbar-title class="navbar-content">
+    <h6 class="h6">
+      Dirty Garage
+    </h6>
+    <div class="row-layout group">
+      <button igxButton="contained" type="button" igxRipple routerLink="/general-info" class="button">
+        Полиране
+      </button>
+      <button igxButton="contained" type="button" igxRipple routerLink="/contact-information" class="button">
+        Контакти
+      </button>
+    </div>
+  </igx-navbar-title>
+</igx-navbar>
+<div class="row-layout group_1">
+  <igx-nav-drawer [pin]="true" width="247px" #navDrawer class="nav-drawer">
     <ng-template igxDrawer>
       <div igxDrawerItem igxRipple routerLink="/general-info">
         <igx-icon class="icon_1">
-          account_circle
+          info
         </igx-icon>
         <span>Основна информация</span>
       </div>
       <div igxDrawerItem igxRipple routerLink="/polish-info">
         <igx-icon class="icon_1">
-          account_circle
+          cleaning_services
         </igx-icon>
         <span>Полиране на фарове</span>
       </div>
@@ -41,13 +43,13 @@
       </div>
       <div igxDrawerItem igxRipple routerLink="/contact-information">
         <igx-icon class="icon_1">
-          account_circle
+          phone
         </igx-icon>
         <span>Контакти</span>
       </div>
       <div [disabled]="true" igxDrawerItem igxRipple>
         <igx-icon class="icon_1">
-          account_circle
+          calendar_month
         </igx-icon>
         <span>Запази час</span>
       </div>
@@ -59,9 +61,9 @@
 </div>
 <div class="row-layout footer">
   <p class="ig-typography__body-2 text">
-    Copyright ©2024 DirtyGarage.com, Inc. All Rights Reserved.
+    Copyright ©2024 DirtyGarage.bg, Inc. All Rights Reserved.
   </p>
-  <button igxButton="flat" type="button" igxRipple routerLink="/terms-of-use" class="button">
+  <button igxButton="flat" type="button" igxRipple routerLink="/terms-of-use" class="button_1">
     Условия за ползване
   </button>
 </div>

@@ -15,8 +15,6 @@
   align-items: stretch;
   align-content: flex-start;
   position: relative;
-  min-width: 960px;
-  min-height: 50px;
   flex-grow: 1;
   flex-shrink: 0;
 }
@@ -60,8 +58,10 @@
   gap: 48px;
   position: relative;
   padding: 48px 24px;
+  width: 100%;
   min-width: 50px;
   min-height: 50px;
+  max-width: 100%;
   flex-grow: 1;
   flex-shrink: 0;
 }
@@ -81,7 +81,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 25px;
+  gap: 10px;
   min-width: 50px;
   align-self: flex-start;
   flex-grow: 1;
@@ -89,52 +89,20 @@
 }
 .group_3 {
   background-color: var(--ig-gray-100);
-  border-color: var(--ig-gray-900);
-  border-width: 1px;
-  border-style: solid;
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
-  gap: 25px;
+  gap: 5px;
   position: relative;
-  padding: 25px;
+  padding: 7px;
+  max-width: 500px;
 }
 .card {
-  width: 260px;
+  width: 50%;
   height: max-content;
-  min-width: 260px;
-  max-width: 260px;
+  min-width: 50%;
+  max-width: 50%;
   flex-shrink: 0;
-}
-.sitemap {
-  border-color: var(--ig-gray-200);
-  border-width: 1px 0px 0px;
-  border-style: solid;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 32px;
-  overflow: hidden;
-  position: relative;
-  padding: 24px;
-  min-width: 50px;
-  min-height: 170px;
-}
-.group_4 {
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  position: relative;
-  min-width: 50px;
-  min-height: 50px;
-}
-.group_5 {
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: flex-start;
-  position: relative;
-  min-width: 50px;
-  min-height: 50px;
 }
 .h4 {
   text-align: center;
@@ -149,26 +117,12 @@
   height: max-content;
   min-width: min-content;
 }
-.content_1 {
-  text-align: center;
-  height: max-content;
-  min-width: min-content;
-}
 .image {
   height: 100%;
   min-height: 100%;
   max-height: 100%;
 }
-.text_1 {
-  height: max-content;
-  min-width: min-content;
-}
-.text_2 {
-  margin: 8px 0 0;
-  height: max-content;
-  min-width: min-content;
-}
 .media-content {
-  min-height: 400px;
-  max-height: 400px;
+  min-height: 200px;
+  max-height: 200px;
 }
