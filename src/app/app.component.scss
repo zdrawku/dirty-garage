@@ -1,0 +1,104 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  overflow: auto;
+}
+.row-layout {
+  display: flex;
+}
+.group {
+  border-color: var(--ig-gray-200);
+  border-width: 0px 0px 1px;
+  border-style: solid;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 10px;
+  width: 100%;
+  min-width: 100%;
+  min-height: 71px;
+  max-width: 100%;
+  align-self: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.group_1 {
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 0 10px;
+}
+.group_2 {
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+.group_3 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.footer {
+  background-color: var(--ig-gray-100);
+  border-color: var(--ig-gray-200);
+  border-width: 0px 0px 1px;
+  border-style: solid;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  padding: 0 24px;
+  height: 35px;
+  min-width: 50px;
+  min-height: 35px;
+  max-height: 35px;
+}
+.icon-button {
+  --igx-button-foreground: var(--ig-surface-500);
+  --igx-button-background: var(--ig-primary-300);
+}
+.icon {
+  color: var(--ig-surface-500);
+}
+.icon_1 {
+  --size: 24px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.text {
+  color: var(--ig-gray-800);
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+.button {
+  --igx-button-foreground: var(--ig-gray-700);
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+  flex-shrink: 0;
+}
+.nav-drawer {
+  min-width: min-content;
+  min-height: 0;
+  max-width: 247px;
+  flex-shrink: 0;
+}
+.view-container {
+  overflow: auto;
+  position: relative;
+  flex-grow: 1;
+}

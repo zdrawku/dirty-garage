@@ -1,0 +1,67 @@
+<div class="row-layout group">
+  <div class="row-layout group_1">
+    <button igxRipple igxIconButton="flat" [igxToggleAction]="navDrawer" class="icon-button">
+      <igx-icon class="icon">
+        menu
+      </igx-icon>
+    </button>
+  </div>
+  <div class="row-layout group_2">
+    <button igxButton="flat" type="button" igxRipple routerLink="/general-info" class="button">
+      Основна информация
+    </button>
+    <button igxButton="flat" type="button" igxRipple routerLink="/polish-info" class="button">
+      Полиране на фарове
+    </button>
+    <button igxButton="flat" type="button" igxRipple routerLink="/who-we-are" class="button">
+      Кои сме ние?
+    </button>
+  </div>
+</div>
+<div class="row-layout group_3">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" width="247px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawer>
+      <div igxDrawerItem igxRipple routerLink="/general-info">
+        <igx-icon class="icon_1">
+          account_circle
+        </igx-icon>
+        <span>Основна информация</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/polish-info">
+        <igx-icon class="icon_1">
+          account_circle
+        </igx-icon>
+        <span>Полиране на фарове</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/who-we-are">
+        <igx-icon class="icon_1">
+          account_circle
+        </igx-icon>
+        <span>Кои сме ние?</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/contact-information">
+        <igx-icon class="icon_1">
+          account_circle
+        </igx-icon>
+        <span>Контакти</span>
+      </div>
+      <div [disabled]="true" igxDrawerItem igxRipple>
+        <igx-icon class="icon_1">
+          account_circle
+        </igx-icon>
+        <span>Запази час</span>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div class="row-layout footer">
+  <p class="ig-typography__body-2 text">
+    Copyright ©2024 DirtyGarage.com, Inc. All Rights Reserved.
+  </p>
+  <button igxButton="flat" type="button" igxRipple routerLink="/terms-of-use" class="button">
+    Условия за ползване
+  </button>
+</div>
