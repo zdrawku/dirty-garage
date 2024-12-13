@@ -10,17 +10,36 @@
     <h6 class="h6">
       Dirty Garage
     </h6>
-    <div class="row-layout group">
-      <button igxButton="contained" type="button" igxRipple routerLink="/general-info" class="button">
-        Полиране
-      </button>
-      <button igxButton="contained" type="button" igxRipple routerLink="/contact-information" class="button">
-        Контакти
-      </button>
-    </div>
   </igx-navbar-title>
+  @if (iconButtonVisible) {
+    <button igxRipple igxIconButton="flat">
+      <igx-icon>
+        search
+      </igx-icon>
+    </button>
+  }
+  @if (iconButtonVisible1) {
+    <button igxRipple igxIconButton="flat">
+      <igx-icon>
+        favorite
+      </igx-icon>
+    </button>
+  }
+  <button igxButton="contained" type="button" igxRipple routerLink="/general-info" class="button">
+    Полиране
+  </button>
+  <button igxButton="contained" type="button" igxRipple routerLink="/contact-information" class="button">
+    Контакти
+  </button>
+  @if (iconButtonVisible2) {
+    <button igxRipple igxIconButton="flat">
+      <igx-icon>
+        more_vert
+      </igx-icon>
+    </button>
+  }
 </igx-navbar>
-<div class="row-layout group_1">
+<div class="row-layout group">
   <igx-nav-drawer [pin]="true" width="247px" #navDrawer class="nav-drawer">
     <ng-template igxDrawer>
       <div igxDrawerItem igxRipple routerLink="/general-info">
@@ -55,15 +74,15 @@
       </div>
     </ng-template>
   </igx-nav-drawer>
-  <div class="column-layout group_2">
+  <div class="column-layout group_1">
     <div class="view-container">
       <router-outlet></router-outlet>
     </div>
   </div>
 </div>
 <div class="row-layout footer">
-  <div class="row-layout group_3">
-    <div class="column-layout group_4">
+  <div class="row-layout group_2">
+    <div class="column-layout group_3">
       <p class="ig-typography__body-2 text">
         Copyright ©2024
       </p>

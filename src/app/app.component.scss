@@ -49,19 +49,22 @@
   height: max-content;
   min-width: min-content;
 }
+.button {
+  --igx-button-foreground: var(--ig-gray-100);
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+}
+.button_1 {
+  --igx-button-foreground: var(--ig-gray-100);
+  --igx-button-background: var(--ig-primary-500);
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+  flex-shrink: 0;
+}
 .row-layout {
   display: flex;
 }
 .group {
-  justify-content: flex-end;
-  align-items: center;
-  align-content: flex-start;
-  position: relative;
-  width: 80%;
-  min-width: 80%;
-  max-width: 80%;
-}
-.group_1 {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -75,7 +78,7 @@
   display: flex;
   flex-direction: column;
 }
-.group_2 {
+.group_1 {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -100,29 +103,16 @@
   min-height: 35px;
   max-height: 65px;
 }
-.group_3 {
+.group_2 {
   justify-content: center;
   align-items: center;
   align-content: flex-start;
   gap: 5px;
   position: relative;
 }
-.group_4 {
+.group_3 {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
   position: relative;
-}
-.button {
-  --igx-button-foreground: var(--ig-gray-100);
-  --ig-size: var(--ig-size-medium);
-  height: max-content;
-  flex-shrink: 0;
-}
-.button_1 {
-  --igx-button-foreground: var(--ig-gray-100);
-  --igx-button-background: var(--ig-primary-500);
-  --ig-size: var(--ig-size-medium);
-  height: max-content;
-  flex-shrink: 0;
 }
