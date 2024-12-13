@@ -28,8 +28,10 @@
   <button igxButton="contained" type="button" igxRipple routerLink="/general-info" class="button">
     Полиране
   </button>
-  <button igxButton="contained" type="button" igxRipple routerLink="/contact-information" class="button">
-    Контакти
+  <button igxRipple igxIconButton="flat" routerLink="/contact-information" class="icon-button_1">
+    <igx-icon class="icon">
+      phone
+    </igx-icon>
   </button>
   @if (iconButtonVisible2) {
     <button igxRipple igxIconButton="flat">
@@ -87,7 +89,7 @@
         Copyright ©2024
       </p>
       <p class="ig-typography__body-2 text">
-        All Rights Reserved.
+        All Rights Reserved
       </p>
     </div>
     <button igxButton="flat" type="button" igxRipple routerLink="/terms-of-use" class="button_1">
