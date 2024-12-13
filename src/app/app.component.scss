@@ -30,6 +30,10 @@
 .navbar-content {
   gap: 1rem;
 }
+.icon-button_1 {
+  --igx-button-foreground: var(--ig-gray-100);
+  --igx-button-background: transparent;
+}
 .icon {
   color: var(--ig-gray-100);
 }
