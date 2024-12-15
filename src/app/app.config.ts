@@ -2,7 +2,7 @@ import { ApplicationConfig, ErrorHandler, Provider, importProvidersFrom } from '
 import { provideRouter } from '@angular/router';
 import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 import { routes } from './app.routes';
 import { GlobalErrorHandlerService } from './error-routing/error/global-error-handler.service';
 import { environment } from '../environments/environment';
@@ -12,7 +12,7 @@ import { environment } from '../environments/environment';
 // { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
 const providers: Provider = [
   provideRouter(routes),
-  importProvidersFrom(BrowserModule, HammerModule),
+  importProvidersFrom(BrowserModule, HammerModule, HttpClientModule),
   provideAnimations()
 ];
 
