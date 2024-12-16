@@ -44,31 +44,31 @@
 <div class="row-layout group">
   <igx-nav-drawer [pinThreshold]="0" width="247px" #navDrawer class="nav-drawer">
     <ng-template igxDrawer>
-      <div igxDrawerItem igxRipple routerLink="/general-info">
+      <div igxDrawerItem igxRipple routerLink="/general-info" (click)="navDrawer.toggle()">
         <igx-icon class="icon_1">
           info
         </igx-icon>
         <span>Основна информация</span>
       </div>
-      <div igxDrawerItem igxRipple routerLink="/polish-info">
+      <div igxDrawerItem igxRipple routerLink="/polish-info" (click)="navDrawer.toggle()">
         <igx-icon class="icon_1">
           cleaning_services
         </igx-icon>
         <span>Полиране на фарове</span>
       </div>
-      <div igxDrawerItem igxRipple routerLink="/who-we-are">
+      <div igxDrawerItem igxRipple routerLink="/who-we-are" (click)="navDrawer.toggle()">
         <igx-icon class="icon_1">
           account_circle
         </igx-icon>
         <span>Кои сме ние?</span>
       </div>
-      <div igxDrawerItem igxRipple routerLink="/contact-information">
+      <div igxDrawerItem igxRipple routerLink="/contact-information" (click)="navDrawer.toggle()">
         <igx-icon class="icon_1">
           phone
         </igx-icon>
         <span>Контакти</span>
       </div>
-      <div igxDrawerItem igxRipple routerLink="/scheduler">
+      <div igxDrawerItem igxRipple routerLink="/scheduler" (click)="navDrawer.toggle()">
         <igx-icon class="icon_1">
           calendar_month
         </igx-icon>
