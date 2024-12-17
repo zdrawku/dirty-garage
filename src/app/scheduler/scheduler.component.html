@@ -18,19 +18,22 @@
         Запази час
       </h5>
       <form (submit)="bookAppointment($event)">
-        <div class="row-layout group_3">
+        <div class="column-layout group_3">
           <div class="form-group">
-            <label for="date">Изберете дата: </label>
+            <label for="date">Изберете дата </label>
             <input type="date" id="date" name="date" class="form-control" required>
           </div>
           <div class="form-group">
-            <label for="time"> и час </label>
-            <input type="time" id="time" name="time" class="form-control" required>
+            <label for="time">Час </label>
+            <input type="time" id="time" name="time" step="1" min="00:00" max="23:59" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="mail">e-mail </label>
+            <input type="email" id="mail" name="time" placeholder="e-mail" class="form-control" required>
           </div>
           <button type="submit" igxButton="contained" igxRipple class="button">
             Запази
           </button>
-
         </div>
       </form>
       <div class="row-layout group_4">

@@ -14,9 +14,11 @@ export class SchedulerComponent {
     const form = event.target as HTMLFormElement;
     const date = (form.querySelector('#date') as HTMLInputElement).value;
     const time = (form.querySelector('#time') as HTMLInputElement).value;
-    
-    const mailtoLink = `mailto:dirty.garage23@gmail.com?subject=Искам час за полиране на фарове&body=Искам да запазя час за ${date} в ${time} часа.%0A%0AМожете да добавите срещата в Google Calendar чрез следния линк:%0Ahttps%3A%2F%2Fcalendar.google.com%2Fcalendar%2Frender%3Faction%3DTEMPLATE%26text%3DЗапазване%2520на%2520час%2520за%2520полиране%26dates%3D20241220T140000%2F20241220T150000%26details%3DПолиране%2520на%2520фарове%26location%3DDirty%2520Garage `;
-    
+    const mail = (form.querySelector('#mail') as HTMLInputElement).value;
+
+    const subject = encodeURIComponent(`Искам час за полиране на фарове от ${mail}`);
+    const body = encodeURIComponent(`Искам да запазя час за ${date} в ${time} часа.\n\nМожете да добавите срещата в Google Calendar чрез следния линк:\nhttps://calendar.google.com/calendar/render?action=TEMPLATE&text=Запазване на час за полиране от ${mail}&dates=${date.replace(/-/g, '')}T${time.replace(':', '')}00/${date.replace(/-/g, '')}T${(parseInt(time.split(':')[0]) + 1).toString().padStart(2, '0')}${time.split(':')[1]}00&details=Полиране на фарове&location=Dirty Garage`);
+    const mailtoLink = `mailto:dirty.garage23@gmail.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
   }
 }
