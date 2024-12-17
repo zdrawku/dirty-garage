@@ -15,26 +15,28 @@
   <div class="row-layout content">
     <div class="column-layout group_2">
       <h5 class="h5">
-        Запази час:
+        Запази час
       </h5>
-      <div class="row-layout group_3">
-        <form (submit)="bookAppointment($event)">
+      <form (submit)="bookAppointment($event)">
+        <div class="row-layout group_3">
           <div class="form-group">
-            <label for="date">Date:</label>
+            <label for="date">Изберете дата: </label>
             <input type="date" id="date" name="date" class="form-control" required>
           </div>
           <div class="form-group">
-            <label for="time">Time:</label>
+            <label for="time"> и час </label>
             <input type="time" id="time" name="time" class="form-control" required>
           </div>
-          
           <button type="submit" igxButton="contained" igxRipple class="button">
             Запази
           </button>
-        </form>
-      </div>
+
+        </div>
+      </form>
       <div class="row-layout group_4">
-        <iframe src="https://calendar.google.com/calendar/embed?src=2262a4f5fb5375e2c3339334443c74d7fc0c801501c6a9b1be3b5debaf2599cc%40group.calendar.google.com&ctz=Europe%2FSofia" style="border: 0" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=2262a4f5fb5375e2c3339334443c74d7fc0c801501c6a9b1be3b5debaf2599cc%40group.calendar.google.com&ctz=Europe%2FSofia"
+          style="border: 0" width="100%" height="100%" frameborder="0"></iframe>
       </div>
     </div>
   </div>
