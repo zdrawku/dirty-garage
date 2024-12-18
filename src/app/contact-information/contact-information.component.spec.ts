@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { IgxButtonDirective, IgxRippleDirective, IgxIconComponent } from 'igniteui-angular';
 import { ContactInformationComponent } from './contact-information.component';
 
 describe('ContactInformationComponent', () => {
@@ -8,10 +11,12 @@ describe('ContactInformationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactInformationComponent]
+      imports: [ ContactInformationComponent, NoopAnimationsModule, FormsModule, IgxButtonDirective, IgxRippleDirective, IgxIconComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(ContactInformationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

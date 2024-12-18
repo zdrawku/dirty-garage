@@ -125,7 +125,7 @@
   justify-content: flex-start;
   align-items: center;
   align-content: flex-start;
-  gap: 5px;
+  gap: 10px;
   position: relative;
   min-width: 100px;
 }
@@ -154,4 +154,9 @@
 .terms-header-8 {
   margin: 5px;
   height: max-content;
+}
+.button {
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+  flex-shrink: 0;
 }

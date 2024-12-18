@@ -35,3 +35,7 @@ html, body {
 .outer-wrapper > *:not(router-outlet) {
   width: 100%;
 }
+
+.imx-icon {
+  -webkit-mask-size: auto;
+}
