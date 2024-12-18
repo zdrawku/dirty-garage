@@ -25,8 +25,10 @@
       </igx-icon>
     </button>
   }
-  <button igxButton="contained" type="button" igxRipple routerLink="/general-info" class="button">
-    Полиране
+  <button igxRipple igxIconButton="flat" routerLink="/general-info" class="icon-button_1">
+    <igx-icon class="icon">
+      info
+    </igx-icon>
   </button>
   <button igxRipple igxIconButton="flat" routerLink="/contact-information" class="icon-button_1">
     <igx-icon class="icon">
@@ -35,6 +37,11 @@
   </button>
   <button igxRipple igxIconButton="flat" routerLink="/scheduler" class="icon-button_1">
     <igx-icon family="imx-icon" name="imx-next-month" class="icon"></igx-icon>
+  </button>
+  <button igxRipple igxIconButton="flat" routerLink="/scheduler" class="icon-button_1">
+    <igx-icon class="icon">
+      location_on
+    </igx-icon>
   </button>
   @if (iconButtonVisible2) {
     <button igxRipple igxIconButton="flat">
@@ -95,7 +102,7 @@
         All Rights Reserved
       </p>
     </div>
-    <button igxButton="flat" type="button" igxRipple routerLink="/terms-of-use" class="button_1">
+    <button igxButton="flat" type="button" igxRipple routerLink="/terms-of-use" class="button">
       Условия
     </button>
   </div>
