@@ -52,6 +52,22 @@
   color: var(--ig-gray-800);
   height: max-content;
   min-width: min-content;
+  flex-shrink: 0;
+}
+.hyperlink {
+  text-align: center;
+  color: var(--ig-info-500);
+  cursor: pointer;
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+.hyperlink_1 {
+  text-align: center;
+  color: var(--ig-info-500);
+  cursor: pointer;
+  height: max-content;
+  min-width: min-content;
 }
 .row-layout {
   display: flex;
@@ -109,10 +125,10 @@
   gap: 0;
   position: relative;
 }
-.button {
-  --igx-button-foreground: var(--ig-gray-100);
-  --igx-button-background: var(--ig-primary-500);
-  --ig-size: var(--ig-size-small);
-  height: max-content;
-  flex-shrink: 0;
+.group_4 {
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 1px;
+  position: relative;
 }
