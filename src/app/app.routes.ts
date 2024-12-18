@@ -6,7 +6,6 @@ import { PolishInfoComponent } from './polish-info/polish-info.component';
 import { WhoWeAreComponent } from './who-we-are/who-we-are.component';
 import { ContactInformationComponent } from './contact-information/contact-information.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
-import { CalendarComponent } from './calendar/calendar.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
 
 export const routes: Routes = [
@@ -45,13 +44,6 @@ export const routes: Routes = [
     component: TermsOfUseComponent,
     data: {
       text: 'Terms of use'
-    }
-  },
-  {
-    path: 'calendar',
-    component: CalendarComponent,
-    data: {
-      text: 'Calendar'
     }
   },
   {

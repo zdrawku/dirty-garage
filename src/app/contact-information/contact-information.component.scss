@@ -107,7 +107,7 @@
   overflow: auto;
   position: relative;
   padding: 20px;
-  min-width: 500px;
+  min-width: 332px;
   flex-grow: 1;
   flex-basis: 0;
 }
@@ -118,7 +118,7 @@
   align-content: flex-start;
   gap: 2px;
   position: relative;
-  min-width: 300px;
+  min-width: 100px;
 }
 .group_6 {
   flex-wrap: wrap;
@@ -127,7 +127,7 @@
   align-content: flex-start;
   gap: 5px;
   position: relative;
-  min-width: 300px;
+  min-width: 100px;
 }
 .h4 {
   text-align: center;
@@ -147,12 +147,9 @@
   height: max-content;
   min-width: min-content;
 }
-.terms-header-1 {
+.terms-header-4 {
   height: max-content;
   min-width: min-content;
-}
-.terms-header-7 {
-  height: max-content;
 }
 .terms-header-8 {
   margin: 5px;
