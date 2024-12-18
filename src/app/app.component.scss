@@ -53,18 +53,6 @@
   height: max-content;
   min-width: min-content;
 }
-.button {
-  --igx-button-foreground: var(--ig-gray-100);
-  --ig-size: var(--ig-size-small);
-  height: max-content;
-}
-.button_1 {
-  --igx-button-foreground: var(--ig-gray-100);
-  --igx-button-background: var(--ig-primary-500);
-  --ig-size: var(--ig-size-small);
-  height: max-content;
-  flex-shrink: 0;
-}
 .row-layout {
   display: flex;
 }
@@ -120,4 +108,11 @@
   align-content: flex-start;
   gap: 0;
   position: relative;
+}
+.button {
+  --igx-button-foreground: var(--ig-gray-100);
+  --igx-button-background: var(--ig-primary-500);
+  --ig-size: var(--ig-size-small);
+  height: max-content;
+  flex-shrink: 0;
 }
