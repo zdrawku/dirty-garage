@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { IgxButtonDirective, IgxOverlayOutletDirective, IgxRippleDirective, IgxToggleActionDirective, IgxToggleDirective } from 'igniteui-angular';
+import { IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
 
 @Component({
   selector: 'app-polish-info',
-  imports: [RouterLink, IgxButtonDirective, IgxOverlayOutletDirective, IgxRippleDirective, IgxToggleActionDirective, IgxToggleDirective],
+  imports: [RouterLink, IgxButtonDirective, IgxRippleDirective],
   templateUrl: './polish-info.component.html',
   styleUrls: ['./polish-info.component.scss']
 })

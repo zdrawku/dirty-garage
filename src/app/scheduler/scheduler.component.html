@@ -15,24 +15,32 @@
   <div class="row-layout content">
     <div class="column-layout group_2">
       <h5 class="h5">
-        Запази час:
+        Запази час
       </h5>
-      <div class="row-layout group_3">
-        <igx-input-group type="border" class="input">
-          <input type="text" igxDateTimeEditor="yyyy/MM/dd" displayFormat="shortDate" igxInput />
-          <label igxLabel>Date</label>
-          <igx-hint>Избери ден</igx-hint>
-        </igx-input-group>
-        <igx-input-group type="border" class="input">
-          <input type="text" igxDateTimeEditor="yyyy/MM/dd" displayFormat="shortDate" igxInput />
-          <label igxLabel>Date</label>
-          <igx-hint>Избери час</igx-hint>
-        </igx-input-group>
-        <button igxButton="contained" type="button" igxRipple class="button">
-          Запази
-        </button>
+      <form (submit)="bookAppointment($event)">
+        <div class="column-layout group_3">
+          <div class="form-group">
+            <label for="date">Изберете дата </label>
+            <input type="date" id="date" name="date" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="time">Час </label>
+            <input type="time" id="time" name="time" step="1" min="00:00" max="23:59" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="mail">e-mail </label>
+            <input type="email" id="mail" name="time" placeholder="e-mail" class="form-control" required>
+          </div>
+          <button type="submit" igxButton="contained" igxRipple class="button">
+            Запази
+          </button>
+        </div>
+      </form>
+      <div class="row-layout group_4">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=2262a4f5fb5375e2c3339334443c74d7fc0c801501c6a9b1be3b5debaf2599cc%40group.calendar.google.com&ctz=Europe%2FSofia"
+          style="border: 0" width="100%" height="100%" frameborder="0"></iframe>
       </div>
-      <div class="row-layout group_4"></div>
     </div>
   </div>
 </div>
