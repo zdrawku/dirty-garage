@@ -35,12 +35,12 @@ jobs:
     - name: Build project with custom domain base-href
       run: npm run build -- --base-href "/"  # Changed to root for custom domain
     - name: Update Resource Paths
-      run: find ./dist/${{ env.PROJECT_NAME }}/browser -type f -name '*main*.js' -exec sed -i -e "s|/${{ github.event.repository.name }}/assets|/assets|g" -e "s|url('/${{ github.event.repository.name }}/assets|url('/assets|g" {} +
+      run: find ./dist/browser -type f -name '*main*.js' -exec sed -i -e "s|/${{ github.event.repository.name }}/assets|/assets|g" -e "s|url('/${{ github.event.repository.name }}/assets|url('/assets|g" {} +
     - name: SPA routing handling
-      run: cp ./dist/${{ env.PROJECT_NAME }}/browser/index.html ./dist/${{ env.PROJECT_NAME }}/browser/404.html
+      run: cp ./dist/browser/index.html ./dist/browser/404.html
     - name: Upload build artifact to GitHub Pages
       uses: actions/upload-pages-artifact@v1
       with:
-        path: ./dist/${{ env.PROJECT_NAME }}/browser
+        path: ./dist/browser
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v1
