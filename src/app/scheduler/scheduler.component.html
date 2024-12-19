@@ -30,10 +30,10 @@
           </div>
           <div class="form-group">
             <label for="time">Час </label>
-            <input type="time" id="time" name="time" class="form-control" required ngModel>
+            <input type="time" id="time" name="time" class="form-control" required ngModel min="09:00" max="18:00">
             @if (appointmentForm.submitted && !appointmentForm.controls['time'].valid) {
               <div class="text-danger">
-                Моля, въведете валиден час.
+                Моля, въведете валиден час (между 9AM и 6PM).
               </div>
             }
           </div>

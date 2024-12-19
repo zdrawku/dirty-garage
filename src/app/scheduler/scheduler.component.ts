@@ -23,13 +23,32 @@ export class SchedulerComponent {
         const phone = (form.querySelector('#phone') as HTMLInputElement).value;
 
         const subject = encodeURIComponent(`Искам час за полиране на фарове от ${mail || phone}`);
-        const calendarLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Запазване на час за полиране от ${mail || phone}`)}&dates=${date.replace(/-/g, '')}T${time.replace(':', '')}00/${date.replace(/-/g, '')}T${(parseInt(time.split(':')[0]) + 1).toString().padStart(2, '0')}${time.split(':')[1]}00&details=${encodeURIComponent(`Полиране на фарове\nИмейл: ${mail}\nТелефон: ${phone}`)}&location=${encodeURIComponent('Dirty Garage')}`;
-        const body = encodeURIComponent(`Искам да запазя час за ${date} в ${time} часа.\n\nМожете да добавите срещата в Google Calendar чрез следния линк:\n${calendarLink}\n\nТелефон: ${phone}\nИмейл: ${mail}`);
+        const startTime = time.replace(':', '');
+        const endTime = this.calculateEndTime(startTime);
+        const calendarLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Запазване на час за полиране от ${mail || phone}`)}&dates=${date.replace(/-/g, '')}T${startTime}00/${date.replace(/-/g, '')}T${endTime}00&details=${encodeURIComponent(`Полиране на фарове\nИмейл: ${mail}\nТелефон: ${phone}`)}&location=${encodeURIComponent('Dirty Garage')}`;
+        const body = encodeURIComponent(`Искам да запазя час за ${date} в ${time} часа за 3 часа.\n\nМожете да добавите срещата в Google Calendar чрез следния линк:\n${calendarLink}\n\nТелефон: ${phone}\nИмейл: ${mail}`);
         const mailtoLink = `mailto:dirty.garage23@gmail.com?subject=${subject}&body=${body}`;
+
         window.location.href = mailtoLink;
       } else {
         alert('Моля, попълнете всички полета правилно.');
       }
     }
+  }
+
+  // Helper function to calculate end time
+  calculateEndTime(startTime: string): string {
+    let hours = parseInt(startTime.slice(0, 2));
+    let minutes = parseInt(startTime.slice(2));
+
+    // Add 3 hours to the start time
+    hours += 3; // Duration is 3 hours
+
+    // Handle day overflow if necessary (not implemented here since we're assuming within same day)
+    if (hours >= 24) {
+      hours -= 24; // This would need more complex logic for multi-day events
+    }
+
+    return `${hours.toString().padStart(2, '0')}${minutes.toString().padStart(2, '0')}`;
   }
 }
