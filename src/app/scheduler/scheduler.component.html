@@ -39,13 +39,8 @@
             }
           </div>
           <div class="form-group">
-            <label for="mail">e-mail </label>
-            <input type="email" id="mail" name="mail" placeholder="e-mail" class="form-control" ngModel>
-            @if (appointmentForm.submitted && !appointmentForm.controls['mail'].valid) {
-            <div class="text-danger">
-              Моля, въведете валиден имейл адрес.
-            </div>
-            }
+            <label for="name">Имена </label>
+            <input type="text" id="name" name="name" placeholder="Иван Иванов" class="form-control" ngModel>
           </div>
           <div class="form-group">
             <label for="phone">Телефон </label>
