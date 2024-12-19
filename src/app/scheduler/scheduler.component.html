@@ -23,36 +23,38 @@
             <label for="date">Изберете дата </label>
             <input type="date" id="date" name="date" class="form-control" required ngModel>
             @if (appointmentForm.submitted && !appointmentForm.controls['date'].valid) {
-              <div class="text-danger">
-                Моля, въведете валидна дата.
-              </div>
+            <div class="text-danger">
+              Моля, въведете валидна дата.
+            </div>
             }
           </div>
           <div class="form-group">
             <label for="time">Час </label>
-            <input type="time" id="time" name="time" class="form-control" required ngModel min="09:00" max="18:00">
-            @if (appointmentForm.submitted && !appointmentForm.controls['time'].valid) {
-              <div class="text-danger">
-                Моля, въведете валиден час (между 9AM и 6PM).
-              </div>
+            <input type="time" id="time" name="time" class="form-control" required ngModel min="09:00" max="18:00"
+              #timeInput="ngModel">
+            @if (appointmentForm.submitted && !timeInput.valid) {
+            <div class="text-danger">
+              Моля, въведете валиден час (между 9AM и 6PM).
+            </div>
             }
           </div>
           <div class="form-group">
             <label for="mail">e-mail </label>
             <input type="email" id="mail" name="mail" placeholder="e-mail" class="form-control" ngModel>
             @if (appointmentForm.submitted && !appointmentForm.controls['mail'].valid) {
-              <div class="text-danger">
-                Моля, въведете валиден имейл адрес.
-              </div>
+            <div class="text-danger">
+              Моля, въведете валиден имейл адрес.
+            </div>
             }
           </div>
           <div class="form-group">
             <label for="phone">Телефон </label>
-            <input type="tel" id="phone" name="phone" placeholder="0888 88 88 88" class="form-control" required pattern="\d{10}" maxlength="10" inputmode="numeric" ngModel>
+            <input type="tel" id="phone" name="phone" placeholder="0888 88 88 88" class="form-control" required
+              pattern="\d{10}" maxlength="10" inputmode="numeric" ngModel>
             @if (appointmentForm.submitted && !appointmentForm.controls['phone'].valid) {
-              <div class="text-danger">
-                Моля, въведете валиден телефонен номер с 10 цифри.
-              </div>
+            <div class="text-danger">
+              Моля, въведете валиден телефонен номер с 10 цифри.
+            </div>
             }
           </div>
           <button type="submit" igxButton="contained" igxRipple class="button">

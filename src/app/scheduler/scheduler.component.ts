@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, ValidatorFn, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-scheduler',
@@ -14,6 +14,10 @@ export class SchedulerComponent {
   bookAppointment(event: Event) {
     event.preventDefault();
     if (this.appointmentForm) { // Check if appointmentForm is defined
+      // Apply the custom validator to the 'time' control
+      this.appointmentForm.controls['time'].setValidators([this.customTimeValidator()]);
+      this.appointmentForm.controls['time'].updateValueAndValidity();
+      
       // this.appointmentForm.submitted = true;
       if (this.appointmentForm.valid) {
         const form = event.target as HTMLFormElement;
@@ -50,5 +54,16 @@ export class SchedulerComponent {
     }
 
     return `${hours.toString().padStart(2, '0')}${minutes.toString().padStart(2, '0')}`;
+  }
+
+  customTimeValidator(): ValidatorFn {
+    return (control: AbstractControl): {[key: string]: any} | null => {
+      if (!control.value) return null;
+      const [hours, minutes] = control.value.split(':').map(Number);
+      if (hours < 9 || hours >= 18) {
+        return { 'invalidTime': true };
+      }
+      return null;
+    };
   }
 }
