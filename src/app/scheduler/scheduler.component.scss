@@ -95,7 +95,7 @@
   position: relative;
   height: 90%;
   min-width: 50px;
-  min-height: 50px;
+  min-height: 350px;
   max-height: 90%;
 }
 .h4 {
@@ -121,7 +121,7 @@
   flex-shrink: 0;
 }
 .button {
-  --ig-size: var(--ig-size-large);
+  --ig-size: var(--ig-size-small);
   height: max-content;
   flex-shrink: 0;
 }
