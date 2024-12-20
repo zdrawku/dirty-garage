@@ -20,7 +20,7 @@
       <form (ngSubmit)="bookAppointment($event)" #appointmentForm="ngForm">
         <div class="column-layout group_3">
           <div class="form-group">
-            <label for="date">Изберете дата </label>
+            <label for="date">Изберете дата:</label>
             <input type="date" id="date" name="date" class="form-control" required ngModel>
             @if (appointmentForm.submitted && !appointmentForm.controls['date'].valid) {
             <div class="text-danger">
@@ -29,7 +29,7 @@
             }
           </div>
           <div class="form-group">
-            <label for="time">Час </label>
+            <label for="time">Час:</label>
             <input type="time" id="time" name="time" class="form-control" required ngModel min="09:00" max="18:00"
               #timeInput="ngModel">
             @if (appointmentForm.submitted && !timeInput.valid) {
@@ -39,11 +39,11 @@
             }
           </div>
           <div class="form-group">
-            <label for="name">Имена </label>
+            <label for="name">Имена:</label>
             <input type="text" id="name" name="name" placeholder="Иван Иванов" class="form-control" ngModel>
           </div>
           <div class="form-group">
-            <label for="phone">Телефон </label>
+            <label for="phone">Телефон:</label>
             <input type="tel" id="phone" name="phone" placeholder="0888 88 88 88" class="form-control" required
               pattern="\d{10}" maxlength="10" inputmode="numeric" ngModel>
             @if (appointmentForm.submitted && !appointmentForm.controls['phone'].valid) {
@@ -55,9 +55,6 @@
           <button type="submit" igxButton="contained" igxRipple class="button">
             Запази
           </button>
-          <!-- <button type="submit" [disabled]="!appointmentForm.valid" igxButton="contained" igxRipple class="button">
-            Запази
-          </button> -->
         </div>
       </form>
       <div class="row-layout group_4">

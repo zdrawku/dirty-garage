@@ -131,3 +131,19 @@
   font-size: small;
   // font-weight: bold;
 }
+
+
+.form-control {
+  padding: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.form-group label {
+  display: inline-flex;
+  width: 103px;
+}
+
+.form-group input {
+  display: inline-flex;
+  width: 120px;
+}
