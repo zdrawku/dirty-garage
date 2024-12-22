@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxIconComponent, IgxTooltipDirective, IgxTooltipTargetDirective } from 'igniteui-angular';
 import { FormsModule, NgForm, ValidatorFn, AbstractControl } from '@angular/forms';
+import axios from 'axios';
 
 @Component({
   selector: 'app-scheduler',
@@ -30,15 +31,24 @@ export class SchedulerComponent {
         const service = serviceElement.value;
         const serviceText = serviceElement.options[serviceElement.selectedIndex].innerText;
         const model = (form.querySelector('#model') as HTMLInputElement).value;
-
+  
         const subject = encodeURIComponent(`Искам час за ${serviceText} от ${name || phone}`);
         const startTime = time.replace(':', '');
         const endTime = this.calculateEndTime(startTime);
         const calendarLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Запазване на час за ${serviceText} от ${name || phone}`)}&dates=${date.replace(/-/g, '')}T${startTime}00/${date.replace(/-/g, '')}T${endTime}00&details=${encodeURIComponent(`${serviceText}\nИмейл: ${name}\nТелефон: ${phone}\nМодел: ${model}`)}&location=${encodeURIComponent('Dirty Garage')}`;
-        const body = encodeURIComponent(`Искам да запазя час за ${serviceText} на ${date} в ${time} часа за 3 часа.\n\nДобави срещата в Google Calendar от тук:\n${calendarLink}\n\nТелефон: ${phone}\nИмейл: ${name}\nМарка, модел и година на автомобил: ${model}`);
-        const mailtoLink = `mailto:dirty.garage23@gmail.com?subject=${subject}&body=${body}`;
-
-        window.location.href = mailtoLink;
+  
+        axios.get(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(calendarLink)}`)
+          .then(response => {
+            const shortCalendarLink = response.data;
+            const body = encodeURIComponent(`Искам да запазя час за ${serviceText} на ${date} в ${time} часа за 3 часа.\n\nДобави срещата в Google Calendar от тук:\n${shortCalendarLink}\n\nТелефон: ${phone}\nИмейл: ${name}\nМарка, модел и година на автомобил: ${model}`);
+            const mailtoLink = `mailto:dirty.garage23@gmail.com?subject=${subject}&body=${body}`;
+  
+            window.location.href = mailtoLink;
+          })
+          .catch(error => {
+            console.error('Error shortening URL:', error);
+            alert('Възникна грешка при съкращаването на URL адреса.');
+          });
       } else {
         alert('Моля, попълнете всички полета правилно.');
       }
