@@ -6,10 +6,12 @@
   align-items: stretch;
   align-content: flex-start;
 }
+
 .column-layout {
   display: flex;
   flex-direction: column;
 }
+
 .page-content {
   justify-content: flex-start;
   align-items: stretch;
@@ -19,9 +21,11 @@
   flex-grow: 1;
   flex-shrink: 0;
 }
+
 .row-layout {
   display: flex;
 }
+
 .main-page-header {
   background-color: #151725;
   background-image: url("/assets/NewHeader.png");
@@ -34,6 +38,7 @@
   padding: 24px;
   min-height: 170px;
 }
+
 .group {
   justify-content: flex-start;
   align-items: stretch;
@@ -44,6 +49,7 @@
   flex-grow: 1;
   flex-basis: 0;
 }
+
 .group_1 {
   justify-content: flex-start;
   align-items: stretch;
@@ -52,6 +58,7 @@
   flex-grow: 1;
   flex-basis: 0;
 }
+
 .content {
   justify-content: center;
   align-items: flex-start;
@@ -62,6 +69,7 @@
   flex-grow: 1;
   flex-shrink: 0;
 }
+
 .group_2 {
   justify-content: flex-start;
   align-items: stretch;
@@ -74,6 +82,7 @@
   flex-grow: 1;
   flex-basis: 0;
 }
+
 .group_3 {
   justify-content: flex-start;
   align-items: flex-start;
@@ -86,6 +95,7 @@
   max-height: 10%;
   align-self: stretch;
 }
+
 .group_4 {
   justify-content: flex-start;
   align-items: stretch;
@@ -96,12 +106,14 @@
   min-height: 350px;
   max-height: 90%;
 }
+
 .h4 {
   text-align: center;
   color: var(--ig-surface-500);
   height: max-content;
   min-width: min-content;
 }
+
 .text {
   text-align: center;
   color: var(--ig-surface-500);
@@ -109,15 +121,18 @@
   height: max-content;
   min-width: min-content;
 }
+
 .h5 {
   height: max-content;
   min-width: min-content;
 }
+
 .input {
   height: max-content;
   min-width: min-content;
   flex-shrink: 0;
 }
+
 .button {
   --ig-size: var(--ig-size-small);
   height: max-content;
@@ -149,4 +164,24 @@
 .form-group select {
   display: inline-flex;
   width: 120px;
+}
+
+.icon-style {
+  vertical-align: middle;
+  font-size: 1.2em;
+  padding-left: 4px;
+  color: var(--ig-primary-500);
+}
+
+.locationTooltip {
+  width: 310px;
+  padding: 3px;
+  font-size: 13px;
+}
+
+.locationTooltipContent {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

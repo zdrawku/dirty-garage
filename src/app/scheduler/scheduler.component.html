@@ -21,10 +21,19 @@
         <div class="column-layout group_3">
           <div class="form-group">
             <label for="service">Услуга:</label>
-            <select id="service" name="service" class="form-control" required  [(ngModel)]="service">
+            <select id="service" name="service" class="form-control" required [(ngModel)]="service">
               <option value="polishing" selected>Полиране</option>
               <option value="polishing_foliering">Полиране и фолиране</option>
             </select>
+            <igx-icon class="icon-style" [igxTooltipTarget]="locationTooltip" [hideDelay]="500">
+              info
+            </igx-icon>
+            <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
+              <div class="locationTooltipContent">
+                Цената за "Полиране" е 60 лева, докато за "Полиране и фолиране" е
+                различна спрямо състояние, големина и сложност на фаровете, като може да варира от 140 до 200 лева.
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <label for="date">Изберете дата:</label>

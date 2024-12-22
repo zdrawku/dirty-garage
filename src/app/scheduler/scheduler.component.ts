@@ -1,10 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxIconComponent, IgxTooltipDirective, IgxTooltipTargetDirective } from 'igniteui-angular';
 import { FormsModule, NgForm, ValidatorFn, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-scheduler',
-  imports: [IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, FormsModule],
+  imports: [IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxIconComponent, FormsModule, IgxTooltipDirective, IgxTooltipTargetDirective],
   templateUrl: './scheduler.component.html',
   styleUrls: ['./scheduler.component.scss']
 })
