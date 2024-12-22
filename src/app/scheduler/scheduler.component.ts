@@ -10,6 +10,7 @@ import { FormsModule, NgForm, ValidatorFn, AbstractControl } from '@angular/form
 })
 export class SchedulerComponent {
   @ViewChild('appointmentForm') appointmentForm: NgForm | undefined; // Declare appointmentForm
+  service: string = 'polishing';
 
   bookAppointment(event: Event) {
     event.preventDefault();
@@ -25,12 +26,15 @@ export class SchedulerComponent {
         const time = (form.querySelector('#time') as HTMLInputElement).value;
         const name = (form.querySelector('#name') as HTMLInputElement).value;
         const phone = (form.querySelector('#phone') as HTMLInputElement).value;
+        const serviceElement = form.querySelector('#service') as HTMLSelectElement;
+        const service = serviceElement.value;
+        const serviceText = serviceElement.options[serviceElement.selectedIndex].innerText;
 
-        const subject = encodeURIComponent(`Искам час за полиране на фарове от ${name || phone}`);
+        const subject = encodeURIComponent(`Искам час за ${serviceText} от ${name || phone}`);
         const startTime = time.replace(':', '');
         const endTime = this.calculateEndTime(startTime);
-        const calendarLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Запазване на час за полиране от ${name || phone}`)}&dates=${date.replace(/-/g, '')}T${startTime}00/${date.replace(/-/g, '')}T${endTime}00&details=${encodeURIComponent(`Полиране на фарове\nИмейл: ${name}\nТелефон: ${phone}`)}&location=${encodeURIComponent('Dirty Garage')}`;
-        const body = encodeURIComponent(`Искам да запазя час за ${date} в ${time} часа за 3 часа.\n\nМожете да добавите срещата в Google Calendar чрез следния линк:\n${calendarLink}\n\nТелефон: ${phone}\nИмейл: ${name}`);
+        const calendarLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Запазване на час за ${serviceText} от ${name || phone}`)}&dates=${date.replace(/-/g, '')}T${startTime}00/${date.replace(/-/g, '')}T${endTime}00&details=${encodeURIComponent(`${serviceText}\nИмейл: ${name}\nТелефон: ${phone}`)}&location=${encodeURIComponent('Dirty Garage')}`;
+        const body = encodeURIComponent(`Искам да запазя час за ${serviceText} на ${date} в ${time} часа за 3 часа.\n\nМожете да добавите срещата в Google Calendar чрез следния линк:\n${calendarLink}\n\nТелефон: ${phone}\nИмейл: ${name}`);
         const mailtoLink = `mailto:dirty.garage23@gmail.com?subject=${subject}&body=${body}`;
 
         window.location.href = mailtoLink;
