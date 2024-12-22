@@ -29,12 +29,13 @@ export class SchedulerComponent {
         const serviceElement = form.querySelector('#service') as HTMLSelectElement;
         const service = serviceElement.value;
         const serviceText = serviceElement.options[serviceElement.selectedIndex].innerText;
+        const model = (form.querySelector('#model') as HTMLInputElement).value;
 
         const subject = encodeURIComponent(`Искам час за ${serviceText} от ${name || phone}`);
         const startTime = time.replace(':', '');
         const endTime = this.calculateEndTime(startTime);
-        const calendarLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Запазване на час за ${serviceText} от ${name || phone}`)}&dates=${date.replace(/-/g, '')}T${startTime}00/${date.replace(/-/g, '')}T${endTime}00&details=${encodeURIComponent(`${serviceText}\nИмейл: ${name}\nТелефон: ${phone}`)}&location=${encodeURIComponent('Dirty Garage')}`;
-        const body = encodeURIComponent(`Искам да запазя час за ${serviceText} на ${date} в ${time} часа за 3 часа.\n\nМожете да добавите срещата в Google Calendar чрез следния линк:\n${calendarLink}\n\nТелефон: ${phone}\nИмейл: ${name}`);
+        const calendarLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Запазване на час за ${serviceText} от ${name || phone}`)}&dates=${date.replace(/-/g, '')}T${startTime}00/${date.replace(/-/g, '')}T${endTime}00&details=${encodeURIComponent(`${serviceText}\nИмейл: ${name}\nТелефон: ${phone}\nМодел: ${model}`)}&location=${encodeURIComponent('Dirty Garage')}`;
+        const body = encodeURIComponent(`Искам да запазя час за ${serviceText} на ${date} в ${time} часа за 3 часа.\n\nДобави срещата в Google Calendar от тук:\n${calendarLink}\n\nТелефон: ${phone}\nИмейл: ${name}\nМарка, модел и година на автомобил: ${model}`);
         const mailtoLink = `mailto:dirty.garage23@gmail.com?subject=${subject}&body=${body}`;
 
         window.location.href = mailtoLink;

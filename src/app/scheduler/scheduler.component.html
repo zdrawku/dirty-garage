@@ -36,6 +36,10 @@
             </div>
           </div>
           <div class="form-group">
+            <label for="model">Модел авт.</label>
+            <input type="text" id="model" name="model" placeholder="BMW E46 2003 г." class="form-control" ngModel>
+          </div>
+          <div class="form-group">
             <label for="date">Изберете дата:</label>
             <input type="date" id="date" name="date" class="form-control" required ngModel>
             @if (appointmentForm.submitted && !appointmentForm.controls['date'].valid) {
