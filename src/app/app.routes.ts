@@ -7,6 +7,7 @@ import { WhoWeAreComponent } from './who-we-are/who-we-are.component';
 import { ContactInformationComponent } from './contact-information/contact-information.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
+import { PricesComponent } from './prices/prices.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'general-info', pathMatch: 'full' },
@@ -51,6 +52,13 @@ export const routes: Routes = [
     component: SchedulerComponent,
     data: {
       text: 'Scheduler'
+    }
+  },
+  {
+    path: 'prices',
+    component: PricesComponent,
+    data: {
+      text: 'Prices'
     }
   },
   { path: '**', component: PageNotFoundComponent } // must always be last
