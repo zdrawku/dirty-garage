@@ -15,24 +15,73 @@
   <div class="row-layout content">
     <div class="column-layout group_2">
       <h5 class="h5">
-        Запази час:
+        Запази час
       </h5>
-      <div class="row-layout group_3">
-        <igx-input-group type="border" class="input">
-          <input type="text" igxDateTimeEditor="yyyy/MM/dd" displayFormat="shortDate" igxInput />
-          <label igxLabel>Date</label>
-          <igx-hint>Избери ден</igx-hint>
-        </igx-input-group>
-        <igx-input-group type="border" class="input">
-          <input type="text" igxDateTimeEditor="yyyy/MM/dd" displayFormat="shortDate" igxInput />
-          <label igxLabel>Date</label>
-          <igx-hint>Избери час</igx-hint>
-        </igx-input-group>
-        <button igxButton="contained" type="button" igxRipple class="button">
-          Запази
-        </button>
+      <form (ngSubmit)="bookAppointment($event)" #appointmentForm="ngForm">
+        <div class="column-layout group_3">
+          <div class="form-group">
+            <label for="service">Услуга:</label>
+            <select id="service" name="service" class="form-control" required [(ngModel)]="service">
+              <option value="polishing" selected>Полиране</option>
+              <option value="polishing_foliering">Полиране и фолиране</option>
+            </select>
+            <igx-icon class="icon-style" [igxTooltipTarget]="locationTooltip" [hideDelay]="500">
+              info
+            </igx-icon>
+            <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
+              <div class="locationTooltipContent">
+                Цената за "Полиране" е 60 лева, докато за "Полиране и фолиране" е
+                различна спрямо състояние, големина и сложност на фаровете, като може да варира от 140 до 200 лева.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="model">Модел авт.</label>
+            <input type="text" id="model" name="model" placeholder="BMW E46 2003 г." class="form-control" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="date">Изберете дата:</label>
+            <input type="date" id="date" name="date" class="form-control" required ngModel>
+            @if (appointmentForm.submitted && !appointmentForm.controls['date'].valid) {
+            <div class="text-danger">
+              Моля, въведете валидна дата.
+            </div>
+            }
+          </div>
+          <div class="form-group">
+            <label for="time">Час:</label>
+            <input type="time" id="time" name="time" class="form-control" required ngModel min="09:00" max="18:00"
+              #timeInput="ngModel">
+            @if (appointmentForm.submitted && !timeInput.valid) {
+            <div class="text-danger">
+              Моля, въведете валиден час (между 9AM и 6PM).
+            </div>
+            }
+          </div>
+          <div class="form-group">
+            <label for="name">Имена:</label>
+            <input type="text" id="name" name="name" placeholder="Иван Иванов" class="form-control" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="0888 88 88 88" class="form-control" required
+              pattern="\d{10}" maxlength="10" inputmode="numeric" ngModel>
+            @if (appointmentForm.submitted && !appointmentForm.controls['phone'].valid) {
+            <div class="text-danger">
+              Моля, въведете валиден телефонен номер с 10 цифри.
+            </div>
+            }
+          </div>
+          <button type="submit" igxButton="contained" igxRipple class="button">
+            Запази
+          </button>
+        </div>
+      </form>
+      <div class="row-layout group_4">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=2262a4f5fb5375e2c3339334443c74d7fc0c801501c6a9b1be3b5debaf2599cc%40group.calendar.google.com&ctz=Europe%2FSofia"
+          style="border: 0" width="100%" height="100%" frameborder="0"></iframe>
       </div>
-      <div class="row-layout group_4"></div>
     </div>
   </div>
 </div>

@@ -27,7 +27,9 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/robots.txt",
+              "src/sitemap.xml"
             ],
             "styles": [
               "./node_modules/@igniteui/material-icons-extended/styles/sprite.css",
@@ -95,7 +97,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/robots.txt" 
             ],
             "styles": [
               "./node_modules/@igniteui/material-icons-extended/styles/sprite.css",
@@ -124,6 +127,7 @@
   "cli": {
     "schematicCollections": [
       "@angular-eslint/schematics"
-    ]
+    ],
+    "analytics": false
   }
 }
