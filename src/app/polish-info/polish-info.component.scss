@@ -63,18 +63,6 @@
   flex-grow: 1;
   flex-shrink: 0;
 }
-.group_2 {
-  justify-content: flex-start;
-  align-items: center;
-  align-content: flex-start;
-  gap: 15px;
-  position: relative;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  flex-grow: 1;
-  flex-basis: 0;
-}
 .h4 {
   text-align: center;
   color: var(--ig-surface-500);
@@ -88,13 +76,6 @@
   height: max-content;
   min-width: min-content;
 }
-.terms-header {
-  text-align: center;
-  width: 100%;
-  height: max-content;
-  min-width: min-content;
-  max-width: 100%;
-}
 .terms-header-1 {
   height: max-content;
   min-width: min-content;
@@ -105,4 +86,5 @@
   height: max-content;
   min-width: 154px;
   max-width: 154px;
+  align-self: center;
 }
