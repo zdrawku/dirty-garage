@@ -4,7 +4,7 @@ import { IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
 
 @Component({
   selector: 'app-polish-info',
-  imports: [IgxButtonDirective, IgxRippleDirective, RouterLink],
+  imports: [RouterLink, IgxButtonDirective, IgxRippleDirective],
   templateUrl: './polish-info.component.html',
   styleUrls: ['./polish-info.component.scss']
 })

@@ -132,3 +132,13 @@
   gap: 3px;
   position: relative;
 }
+
+/* filepath: /c:/ZDK/Personal/dirty-garage/src/app/app.component.scss */
+.custom-link {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove the underline */
+}
+
+.custom-link:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
