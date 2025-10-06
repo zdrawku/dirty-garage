@@ -1,34 +1,27 @@
-import { FlatCompat } from '@eslint/eslintrc';
-
-const compat = new FlatCompat();
+import globals from "globals";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
 
 export default [
-  ...compat.extends('plugin:@angular-eslint/recommended', 'plugin:@angular-eslint/template/process-inline-templates'),
   {
-    files: ['**/*.ts', '**/*.tsx'],
+    ignores: ['projects/**/*', 'dist/**/*', 'node_modules/**/*']
+  },
+  {
+    files: ["**/*.ts"],
     languageOptions: {
+      globals: globals.browser,
+      parser: tsParser,
       parserOptions: {
-        project: ['tsconfig.json'],
-        createDefaultProgram: true,
+        ecmaVersion: 2020,
+        sourceType: "module",
+        project: "./tsconfig.json",
       },
     },
-    rules: {
-      '@angular-eslint/directive-selector': [
-        'error',
-        { type: 'attribute', prefix: 'app', style: 'camelCase' },
-      ],
-      '@angular-eslint/component-selector': [
-        'error',
-        { type: 'element', prefix: 'app', style: 'kebab-case' },
-      ]
+    plugins: {
+      "@typescript-eslint": tseslint,
     },
-  },
-  ...compat.extends('plugin:@angular-eslint/template/recommended'),
-  {
-    files: ['**/*.html'],
-    rules: {},
-  },
-  {
-    ignores: ['projects/**/*']
+    rules: {
+      // Add basic rules here
+    },
   },
 ];

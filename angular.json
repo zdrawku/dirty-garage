@@ -118,7 +118,9 @@
             "lintFilePatterns": [
               "src/**/*.ts",
               "src/**/*.html"
-            ]
+            ],
+            "quiet": false,
+            "fix": false
           }
         }
       }

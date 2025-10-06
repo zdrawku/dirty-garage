@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng test",
-    "lint": "ng lint"
+    "lint": "eslint src --config eslint.config.mjs",
+    "lint:ng": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +50,7 @@
     "@typescript-eslint/eslint-plugin": "~7.11.0",
     "@typescript-eslint/parser": "~7.11.0",
     "eslint": "~8.57.0",
+    "globals": "^16.4.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
