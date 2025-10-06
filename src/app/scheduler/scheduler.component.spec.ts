@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES, IgxDateTimeEditorDirective, IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
 import { SchedulerComponent } from './scheduler.component';
 
 describe('SchedulerComponent', () => {
@@ -11,12 +11,10 @@ describe('SchedulerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ SchedulerComponent, NoopAnimationsModule, FormsModule, IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective ]
+      imports: [SchedulerComponent, NoopAnimationsModule, FormsModule, ReactiveFormsModule, IGX_INPUT_GROUP_DIRECTIVES, IgxDateTimeEditorDirective, IgxButtonDirective, IgxRippleDirective]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(SchedulerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

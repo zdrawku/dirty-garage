@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
@@ -11,12 +11,10 @@ describe('GeneralInfoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ GeneralInfoComponent, NoopAnimationsModule, FormsModule, IGX_CARD_DIRECTIVES ]
+      imports: [GeneralInfoComponent, NoopAnimationsModule, FormsModule, ReactiveFormsModule, IGX_CARD_DIRECTIVES]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(GeneralInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

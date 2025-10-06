@@ -24,11 +24,11 @@
   position: relative;
   flex-grow: 1;
 }
-.icon-button {
-  --igx-button-foreground: var(--ig-gray-100);
-}
 .navbar-content {
   gap: 1rem;
+}
+.icon-button {
+  --igx-button-foreground: var(--ig-gray-100);
 }
 .icon-button_1 {
   --igx-button-foreground: var(--ig-gray-100);

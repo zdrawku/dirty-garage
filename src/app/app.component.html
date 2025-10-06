@@ -1,6 +1,6 @@
 <igx-navbar class="navbar">
   <igx-navbar-action>
-    <button igxRipple igxIconButton="flat" [igxToggleAction]="navDrawer" class="icon-button">
+    <button igxIconButton="flat" igxRipple [igxToggleAction]="navDrawer" class="icon-button">
       <igx-icon class="icon">
         menu
       </igx-icon>
@@ -11,77 +11,71 @@
       Dirty Garage
     </h6>
   </igx-navbar-title>
-  @if (iconButtonVisible) {
-    <button igxRipple igxIconButton="flat">
-      <igx-icon>
-        search
-      </igx-icon>
-    </button>
-  }
-  @if (iconButtonVisible1) {
-    <button igxRipple igxIconButton="flat">
-      <igx-icon>
-        favorite
-      </igx-icon>
-    </button>
-  }
-  <button igxRipple igxIconButton="flat" routerLink="/contact-information" class="icon-button_1">
+  <button igxIconButton="flat" igxRipple>
+    <igx-icon>
+      search
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat" igxRipple>
+    <igx-icon>
+      favorite
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat" igxRipple [routerLink]="['/contact-information']" class="icon-button_1">
     <igx-icon class="icon">
       phone
     </igx-icon>
   </button>
-  <button igxRipple igxIconButton="flat" routerLink="/scheduler" class="icon-button_1">
+  <button igxIconButton="flat" igxRipple [routerLink]="['/scheduler']" class="icon-button_1">
     <igx-icon class="icon">
       calendar_month
     </igx-icon>
   </button>
-  <button igxRipple igxIconButton="flat" routerLink="/scheduler" class="icon-button_1">
+  <button igxIconButton="flat" igxRipple [routerLink]="['/scheduler']" class="icon-button_1">
     <igx-icon class="icon">
       location_on
     </igx-icon>
   </button>
-  @if (iconButtonVisible2) {
-    <button igxRipple igxIconButton="flat">
-      <igx-icon>
-        more_vert
-      </igx-icon>
-    </button>
-  }
+  <button igxIconButton="flat" igxRipple>
+    <igx-icon>
+      more_vert
+    </igx-icon>
+  </button>
 </igx-navbar>
 <div class="row-layout group">
-  <igx-nav-drawer [pinThreshold]="0" width="247px" #navDrawer class="nav-drawer">
+  <igx-nav-drawer [pinThreshold]="stringToNumber('0')" width="247px" #navDrawer class="nav-drawer">
     <ng-template igxDrawer>
-      <div igxDrawerItem igxRipple routerLink="/general-info">
+      <div igxDrawerItem igxRipple [routerLink]="['/general-info']">
         <igx-icon class="icon_1">
           info
         </igx-icon>
         <span>Основна информация</span>
       </div>
-      <div igxDrawerItem igxRipple routerLink="/polish-info">
+      <div igxDrawerItem igxRipple [routerLink]="['/polish-info']">
         <igx-icon class="icon_1">
           cleaning_services
         </igx-icon>
         <span>Полиране на фарове</span>
       </div>
-      <div igxDrawerItem igxRipple routerLink="/prices">
+      <div igxDrawerItem igxRipple [routerLink]="['/prices']">
         <igx-icon class="icon_1">
           euro
         </igx-icon>
         <span>Цени</span>
       </div>
-      <div igxDrawerItem igxRipple routerLink="/who-we-are">
+      <div igxDrawerItem igxRipple [routerLink]="['/who-we-are']">
         <igx-icon class="icon_1">
           account_circle
         </igx-icon>
         <span>Кои сме ние?</span>
       </div>
-      <div igxDrawerItem igxRipple routerLink="/contact-information">
+      <div igxDrawerItem igxRipple [routerLink]="['/contact-information']">
         <igx-icon class="icon_1">
           phone
         </igx-icon>
         <span>Контакти</span>
       </div>
-      <div igxDrawerItem igxRipple routerLink="/scheduler">
+      <div igxDrawerItem igxRipple [routerLink]="['/scheduler']">
         <igx-icon class="icon_1">
           calendar_month
         </igx-icon>
@@ -106,7 +100,7 @@
           App Builder
         </a>
       </div>
-      <a target="_blank" routerLink="/terms-of-use" class="ig-typography__body-1 hyperlink_1">
+      <a target="_blank" [routerLink]="['/terms-of-use']" class="ig-typography__body-1 hyperlink_1">
         Условия
       </a>
     </div>

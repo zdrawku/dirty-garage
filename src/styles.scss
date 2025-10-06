@@ -1,5 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 
+
+/* You can add global styles to this file, and also import other style files */
 // Standard CSS normalize, comment out if not required or using a different module
 @use "minireset.css/minireset";
 @use "igniteui-angular/theming" as *;
@@ -15,7 +16,7 @@ $custom-palette: palette(
   $success: #689F38,
   $warn: #F04623,
   $info: #3F51B5);
-@include theme($palette: $custom-palette, $elevation: false, $roundness: 0);
+@include theme($palette: $custom-palette, $schema: $light-material-schema, $elevation: false, $roundness: 0);
 
 body {
   background: var(--ig-surface-500);

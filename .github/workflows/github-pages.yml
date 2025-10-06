@@ -13,6 +13,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
+      actions: read
 
     environment:
       name: github-pages
@@ -35,12 +36,12 @@ jobs:
     - name: Build project with dynamic base-href
       run: npm run build -- --base-href "/${{ github.event.repository.name }}/"
     - name: Update Resource Paths
-      run: find ./dist/${{ env.PROJECT_NAME }}/browser -type f -name '*main*.js' -exec sed -i -e "s|/assets|/${{ github.event.repository.name }}/assets|g" -e "s|url('/assets|url('/${{ github.event.repository.name }}/assets|g" {} +
+      run: find ./dist/${{ env.PROJECT_NAME }}/browser -type f -name '*.js' -exec sed -i -e "s|/assets|/${{ github.event.repository.name }}/assets|g" -e "s|url('/assets|url('/${{ github.event.repository.name }}/assets|g" {} +
     - name: SPA routing handling
       run: cp ./dist/${{ env.PROJECT_NAME }}/browser/index.html ./dist/${{ env.PROJECT_NAME }}/browser/404.html
     - name: Upload build artifact to GitHub Pages
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./dist/${{ env.PROJECT_NAME }}/browser
     - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v4

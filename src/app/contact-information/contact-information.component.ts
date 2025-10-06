@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { IgxButtonDirective, IgxIconComponent, IgxOverlayOutletDirective, IgxRippleDirective, IgxToggleActionDirective, IgxToggleDirective } from 'igniteui-angular';
+import { IgxButtonDirective, IgxIconComponent, IgxRippleDirective } from 'igniteui-angular';
 
 @Component({
   selector: 'app-contact-information',
-  imports: [IgxButtonDirective, IgxIconComponent, IgxOverlayOutletDirective, IgxRippleDirective, IgxToggleActionDirective, IgxToggleDirective],
+  imports: [IgxButtonDirective, IgxRippleDirective, IgxIconComponent],
   templateUrl: './contact-information.component.html',
   styleUrls: ['./contact-information.component.scss']
 })
-export class ContactInformationComponent {
-}
+export class ContactInformationComponent {}

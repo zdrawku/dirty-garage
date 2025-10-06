@@ -4,5 +4,4 @@ import { Component } from '@angular/core';
   template: '<h2>Error 404: Page not found</h2>',
   standalone: true
 })
-export class PageNotFoundComponent {
-}
+export class PageNotFoundComponent { }
