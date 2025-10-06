@@ -1,6 +1,6 @@
 <igx-navbar class="navbar">
   <igx-navbar-action>
-    <button igxRipple igxIconButton="flat" [igxToggleAction]="navDrawer" class="icon-button">
+    <button igxIconButton="flat" igxRipple [igxToggleAction]="navDrawer" class="icon-button">
       <igx-icon class="icon">
         menu
       </igx-icon>
@@ -30,7 +30,7 @@
       phone
     </igx-icon>
   </button>
-  <button igxRipple igxIconButton="flat" routerLink="/scheduler" class="icon-button_1">
+  <button igxIconButton="flat" igxRipple [routerLink]="['/scheduler']" class="icon-button_1">
     <igx-icon class="icon">
       calendar_month
     </igx-icon>
@@ -40,16 +40,14 @@
       location_on
     </igx-icon>
   </button>
-  @if (iconButtonVisible2) {
-    <button igxRipple igxIconButton="flat">
-      <igx-icon>
-        more_vert
-      </igx-icon>
-    </button>
-  }
+  <button igxIconButton="flat" igxRipple>
+    <igx-icon>
+      more_vert
+    </igx-icon>
+  </button>
 </igx-navbar>
 <div class="row-layout group">
-  <igx-nav-drawer [pinThreshold]="0" width="247px" #navDrawer class="nav-drawer">
+  <igx-nav-drawer [pinThreshold]="stringToNumber('0')" width="247px" #navDrawer class="nav-drawer">
     <ng-template igxDrawer>
       <div igxDrawerItem igxRipple routerLink="/general-info" (click)="navDrawer.toggle()">
         <igx-icon class="icon_1">
@@ -106,7 +104,7 @@
           App Builder
         </a>
       </div>
-      <a target="_blank" routerLink="/terms-of-use" class="ig-typography__body-1 hyperlink_1">
+      <a target="_blank" [routerLink]="['/terms-of-use']" class="ig-typography__body-1 hyperlink_1">
         Условия
       </a>
     </div>

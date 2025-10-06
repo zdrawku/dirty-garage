@@ -23,4 +23,8 @@ export class AppComponent {
   openPhoneNumber(): void {
     window.location.href = `tel:${this.phoneNumber}`;
   }
+
+  public stringToNumber(value: string): number {
+		return parseFloat(value);
+	}
 }

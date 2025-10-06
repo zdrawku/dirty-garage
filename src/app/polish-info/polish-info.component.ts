@@ -8,5 +8,4 @@ import { IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
   templateUrl: './polish-info.component.html',
   styleUrls: ['./polish-info.component.scss']
 })
-export class PolishInfoComponent {
-}
+export class PolishInfoComponent {}
