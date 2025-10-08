@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
 
 @Component({
   selector: 'app-contact-information',
-  imports: [IgxButtonDirective, IgxRippleDirective],
+  imports: [],
   templateUrl: './contact-information.component.html',
   styleUrls: ['./contact-information.component.scss']
 })
