@@ -12,10 +12,10 @@ export class AppComponent {
   public iconButtonVisible: boolean = false;
   public iconButtonVisible1: boolean = false;
   public iconButtonVisible2: boolean = false;
-  phoneNumber: string = '+359898443755';
+  phoneNumber: string = '+359883310616';
 
   openGoogleMaps(): void {
-    const place = 'София, ж.к. Младост 2 272Б';
+    const place = 'София, ул. Нишава 5'; // Replace with your actual address
     const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place)}`;
     window.open(googleMapsUrl, '_blank'); // Open in a new tab
   }

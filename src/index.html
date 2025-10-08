@@ -2,6 +2,18 @@
 <html lang="bg">
 
 <head>
+  <!-- CSP must be the FIRST tag in <head> and contain no comments -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 script-src 'self' 'unsafe-inline' 'unsafe-eval';
+                 script-src-elem 'self';
+                 frame-src https://calendar.google.com;
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://calendar.google.com;
+                 font-src 'self' https://fonts.gstatic.com;
+                 img-src 'self' data: https:;
+                 object-src 'none';
+                 base-uri 'self';">
+
   <meta charset="utf-8">
   <title>Полиране и Защита на Фарове - Автосервиз в София</title>
   <base href="/">
@@ -11,34 +23,23 @@
 
   <!-- Meta Keywords -->
   <meta name="keywords"
-    content="Полиране на фарове, Фолиране на фарове, Защита на фарове, Почистване и полиране на фарове, Автосервиз София, Професионално полиране, Автомобилна козметика, Възстановяване на фарове, Защита от пожълтяване на фарове, Лъскане на фарове, Автомобилна поддръжка, Кристални фарове, Llumar фолио за фарове">
+        content="Полиране на фарове, Фолиране на фарове, Защита на фарове, Почистване и полиране на фарове, Автосервиз София, Професионално полиране, Автомобилна козметика, Възстановяване на фарове, Защита от пожълтяване на фарове, Лъскане на фарове, Автомобилна поддръжка, Кристални фарове, Llumar фолио за фарове">
   <meta name="description"
-    content="Полиране и защита на фарове с 5 години гаранция. Качествени материали, професионални техники и грижа за безопасността ви на пътя.">
+        content="Полиране и защита на фарове с 5 години гаранция. Качествени материали, професионални техники и грижа за безопасността ви на пътя.">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Dirty Garage">
   <meta property="og:description"
-    content="Полиране и защита на фарове с 5 години гаранция. Качествени материали, професионални техники и грижа за безопасността ви на пътя.">
+        content="Полиране и защита на фарове с 5 години гаранция. Качествени материали, професионални техники и грижа за безопасността ви на пътя.">
   <meta property="og:image"
-    content="https://www.dirtygarage.bg/assets/generate-me-an-image-showcasing-a-bookings-page-for-a-1.png">
+        content="https://www.dirtygarage.bg/assets/generate-me-an-image-showcasing-a-bookings-page-for-a-1.png">
   <meta property="og:image:alt" content="Dirty Garage - професионално полиране на фарове">
   <meta property="og:url" content="https://www.dirtygarage.bg/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Dirty Garage">
   <meta property="og:locale" content="bg_BG">
   <meta property="og:locale:alternate" content="en_US">
-
-  <!-- Add CSP meta tag -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self';
-               script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com https://calendar.google.com https://www.google.com https://ssl.gstatic.com;
-               frame-src 'self' https://calendar.google.com;
-               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://calendar.google.com;
-               font-src 'self' https://fonts.gstatic.com;
-               img-src 'self' data: https:;
-               object-src 'none';
-               base-uri 'self';">
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;600;700" rel="stylesheet" />
 </head>
 
